@@ -1,7 +1,7 @@
 # Slurm basics
 
 ## Work folder PANlab in schooner 
-cd /work/omicsbio/
+> cd /work/omicsbio/
 
 ## Information of partition
 > sinfo -p omicsbio
