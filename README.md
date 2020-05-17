@@ -1,4 +1,4 @@
-# README.md
+# README
 
 This repo contains useful information to make good use of the available supercomputers:
 
