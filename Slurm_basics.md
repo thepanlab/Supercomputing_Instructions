@@ -19,7 +19,7 @@ OUTPUT:
 
 
 
-## Table of nodes:
+## Table of nodes in schooner:
 
 |Node| # Processors| # Sockets | Memory |
 |---|---|---|---|
