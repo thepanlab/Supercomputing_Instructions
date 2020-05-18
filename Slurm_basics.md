@@ -32,8 +32,8 @@ if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
 
 Output:
 
-      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-      28204348  omicsbio       ko lizhang1  R 1-13:17:11      1 c657
+         JOBID PARTITION     NAME     USER ST        TIME  NODES NODELIST(REASON) 
+      28204348  omicsbio       ko lizhang1  R  1-13:17:11      1 c657
       28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
       27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
@@ -46,9 +46,9 @@ Output:
 
 Output:
 
-      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-      28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
-      27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
+         JOBID  PARTITION     NAME     USER ST        TIME  NODES NODELIST(REASON) 
+      28000091   omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
+      27996452   omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
 If -p nor u is specified, it shows all jobs in all partitions
 
@@ -169,8 +169,6 @@ Running the command *module avail*, we search for python libraries.
       Python/2.7.15-foss-2018b
       Python/2.7.15-foss-2019b
       Python/2.7.15-GCCcore-7.3.0-bare
-
-
       Python/2.7.15-GCCcore-8.2.0
       Python/2.7.16-GCCcore-8.3.0
       Python/2.7.18-GCCcore-9.3.0
