@@ -163,7 +163,7 @@ Output:
 
 e.g.
 
-Running the command *module avail*, we search for python libraries.
+Running the command `module avail`, we search for python libraries.
 
       Python/2.7.14-intel-2018a
       Python/2.7.15-foss-2018b
