@@ -123,3 +123,81 @@ Output:
    CapWatts=n/a</br>
    CurrentWatts=0 AveWatts=0 </br>
    ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s </br>
+
+## Module availables
+
+In order to see the different modules available, use the following commands.
+
+This [link](http://www.ou.edu/oscer/resources/hpc_software) contains a non-updated list.
+
+> module avail
+
+Output:
+
+>>      ------------------------- /opt/oscer/modulefiles/Linux -------------------------
+>>         compilers/intel/16.0      (D)    mpi/openmpi/1.10.1/intel  (D)
+>>         compilers/intel/16.1             mpi/openmpi/1.10.1/pgi
+>>         compilers/intel/16.3             mpi/openmpi/1.10.3/intel
+>>         compilers/pgi/16.1               netcdf/4.2.0/intel/serial
+>>         hdf4/4.2.10/intel         (D)    netcdf/4.4.0/pgi/serial
+>>         hdf4/4.2.10/pgi                  python/anaconda2-oscer
+>>         hdf5/1.8.12/intel/openmpi        python/anaconda2
+>>         hdf5/1.8.12/intel/serial  (D)    python/anaconda2-4.2.0
+>>         hdf5/1.8.16/pgi/serial           python/anaconda3          (D)
+>>         mpi/intel/16.0            (D)    szip/2.1/intel            (D)
+>>         mpi/intel/16.1                   szip/2.1/pgi
+>>         mpi/intel/16.3
+>>
+>>      -------------------------- /opt/oscer/modulefiles/all >>--------------------------
+>>         454DataAnalysis/2.9
+>>         ABAWACA/1.00-foss-2018b
+>>         ABySS/1.5.2-goolf-1.4.10
+>>         ACTC/1.1-GCCcore-6.4.0
+>>         AMOS/3.1.0-goolf-1.4.10
+>>         ANSYS_Workbench/17.2
+>>         ANTLR/2.7.7-intel-2015b-Python-2.7.10
+>>       --More--
+
+## Load module
+
+> module load module_name
+
+e.g.
+
+Running the command *module avail*, we search for python libraries.
+
+>>   Python/2.7.14-intel-2018a <br>
+   Python/2.7.15-foss-2018b <br>
+   Python/2.7.15-foss-2019b <br>
+   Python/2.7.15-GCCcore-7.3.0-bare <br>
+   Python/2.7.15-GCCcore-8.2.0 <br>
+   Python/2.7.16-GCCcore-8.3.0 <br>
+   Python/2.7.18-GCCcore-9.3.0 <br>
+   Python/3.5.1-intel-2016a <br>
+   Python/3.6.3-intel-2016a <br>
+   Python/3.6.4-foss-2017b <br>
+   Python/3.6.4-foss-2018a <br>
+   Python/3.6.4-intel-2018a <br>
+   Python/3.6.6-foss-2018b <br>
+   Python/3.7.4-GCCcore-8.3.0 <br>
+   Python/3.7.6-foss-2019a <br>
+   Python/3.8.0-GCCcore-8.2.0 <br>
+   Python/3.8.2-GCCcore-9.3.0                                    (D)
+
+
+e.g.
+> module load Python/3.8.0-GCCcore-8.2.0
+
+If the version-variant is not specified the default one is loaded (indicated with a **(D)**)
+
+> module load Python
+
+is equivalent to:
+
+> module load Python/3.8.2-GCCcore-9.3.0 
+
+## List of modules
+
+In order to know the loaded module, run:
+
+> module list
