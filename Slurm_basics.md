@@ -6,18 +6,14 @@
 ## Information of partition
 > sinfo -p omicsbio
 
+Output: 
+
+>>      PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST  
+>>      omicsbio     up   infinite      2    mix c[658,661] 
+>>      omicsbio     up   infinite      4   idle c[651,657,659-660]
 -p: partition
 
 if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
-
-OUTPUT: 
-
-      PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST <br> 
-      omicsbio     up   infinite      2    mix c[658,661] <br>
-      omicsbio     up   infinite      4   idle c[651,657,659-660]
-
-
-
 
 ## Table of nodes in schooner:
 
@@ -34,14 +30,15 @@ OUTPUT:
 
 > squeue -p omicsbio
 
--p: partition <br>
-
 Output:
 
-      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-      28204348  omicsbio       ko lizhang1  R 1-13:17:11      1 c657 </br>
-      28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660 </br>
-      27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659 </br>
+>>      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
+>>      28204348  omicsbio       ko lizhang1  R 1-13:17:11      1 c657 </br>
+>>      28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660 </br>
+>>      27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659 </br>
+
+-p: partition <br>
+
 
 > squeue -u adbadre
 
@@ -49,9 +46,9 @@ Output:
 
 Output:
 
-      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
-      28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660 </br>
-      27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659 </br>
+>>      JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) 
+>>      28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660 </br>
+>>      27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659 </br>
 
 If -p nor u is specified, it shows all jobs in all partitions
 
@@ -69,6 +66,8 @@ e.g. <br>
 
 >  scontrol show partition omicsbio
 
+Output:
+
 >>  PartitionName=omicsbio
    AllowGroups=omicsbio,oscer,wheel,benchmark AllowAccounts=test,default,general,oscer,omicsbio AllowQos=ALL </br>
    AllocNodes=ALL Default=NO QoS=N/A </br>
@@ -84,6 +83,9 @@ e.g. <br>
 ### Node
 
 >scontrol show node c651 </br>
+
+Output:
+
 >>NodeName=c651 Arch=x86_64 CoresPerSocket=22 </br>
    CPUAlloc=1 CPUTot=44 CPULoad=1.02 </br>
    AvailableFeatures=(null) </br>
@@ -102,6 +104,9 @@ e.g. <br>
    ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s </br>
  
 > scontrol show node c657 </br>
+
+Output:
+
 >> NodeName=c657 Arch=x86_64 CoresPerSocket=20 </br>
    CPUAlloc=0 CPUTot=40 CPULoad=0.01 </br>
    AvailableFeatures=(null) </br>
