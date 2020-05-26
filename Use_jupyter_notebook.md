@@ -43,7 +43,7 @@ module load TensorFlow/1.8.0-foss-2018a-Python-3.6.4
 
 In Putty:
 
-It would be necessary to configurate a tunnel. Go to *Connection/SSH/Tunnels*. If you didn't specify a node, you could use the command `squeue`. For instance, with node 660 and port 8893, fill the options in this way, then press **Add**.
+It would be necessary to configurate a tunnel. Go to *Connection/SSH/Tunnels*. If you didn't specify a node, you could use the command `squeue` or see the output file (`jupyter_notebook_number.log`). For instance, with node 660 and port 8893, fill the options in this way, then press **Add**.
 
 ![Putty_setup](Use_jupyter_notebook/Putty_setup.png "Create tunnel")
 
