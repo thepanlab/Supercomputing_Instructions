@@ -2,7 +2,7 @@
 
 ## Configuration batch file
 
-Use the file `pJupyter.batch` inside the *Use_jupyter_notebook*, you would need to modify:
+Use the file `pJupyter.batch` inside the *Use_jupyter_notebook*, you could modify:
 
 The partition you are using:
 
@@ -28,7 +28,7 @@ Working directory
 
 > #SBATCH --chdir=/work/omicsbio/paulcalle/
 
-Change the port, according to your setup
+The port use for the connection:
 
 > port=8893
 
@@ -39,17 +39,13 @@ e.g.
 > module load Python/3.6.4-foss-2018a </br>
 module load TensorFlow/1.8.0-foss-2018a-Python-3.6.4
 
-## Setup port(Windows)
+## Setup tunnel(Windows)
 
 In Putty:
 
-It would be necessary to configurate a tunnel. Go to Connection/SSH/Tunnels:
-
-For the file `pJupyter.batch`. With node 660 and port 8893, fill the options in this way, then press **Add**.
+It would be necessary to configurate a tunnel. Go to *Connection/SSH/Tunnels*. If you didn't specify a node, you could use the command `squeue`. For instance, with node 660 and port 8893, fill the options in this way, then press **Add**.
 
 ![Putty_setup](Use_jupyter_notebook/Putty_setup.png "Create tunnel")
-
-You are ready to use jupyter notebook
 
 ## Open jupyter notebook
 
@@ -65,4 +61,4 @@ e.g.
 
 > http://127.0.0.1:8893/?token=48fc02e6eaef0756fdbcf6e7767336620be5c84afccd45f9
 
-Copy and paste in your browser.
+Copy and paste in your browser. Now you are ready to use jupyter.
