@@ -42,3 +42,27 @@ module load TensorFlow/1.8.0-foss-2018a-Python-3.6.4
 ## Setup port(Windows)
 
 In Putty:
+
+It would be necessary to configurate a tunnel. Go to Connection/SSH/Tunnels:
+
+For the file `pJupyter.batch`. With node 660 and port 8893, fill the options in this way, then press **Add**.
+
+![Putty_setup](Use_jupyter_notebook/Putty_setup.png "Create tunnel")
+
+You are ready to use jupyter notebook
+
+## Open jupyter notebook
+
+After you run
+
+> sbatch pJupyter.batch
+
+Go to the output `jupyter_notebook_number.log` (e.g. `jupyter_notebook_34036888.log`) and look for a line with the following syntax:
+
+> http://127.0.0.1:8893/?token=alphanumeric_code
+
+e.g.
+
+> http://127.0.0.1:8893/?token=48fc02e6eaef0756fdbcf6e7767336620be5c84afccd45f9
+
+Copy and paste in your browser.
