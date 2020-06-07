@@ -62,6 +62,16 @@ e.g. <br>
 
 ## Get Information
 
+# Used space quota
+
+In order to see the space used in your home directory, use:
+
+> getquota
+
+Ouput:
+
+      You're using 8.50 GB of 21.47 GB allowed space.
+
 ### Partition
 
 >  scontrol show partition omicsbio
