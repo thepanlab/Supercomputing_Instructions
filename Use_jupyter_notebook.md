@@ -10,7 +10,7 @@ The partition you are using:
 
 The number of tasks
 
-> #SBATCH --ntasks=10
+> #SBATCH --ntasks=1
 
 The memory size you want to use:
 
