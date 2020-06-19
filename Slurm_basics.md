@@ -74,6 +74,10 @@ Ouput:
 
 ### Partition
 
+>  scontrol show partition partition_name
+
+e.g.
+
 >  scontrol show partition omicsbio
 
 Output:
@@ -91,6 +95,10 @@ Output:
       DefMemPerNode=UNLIMITED MaxMemPerNode=385300
 
 ### Node
+
+>scontrol show node node_name </br>
+
+e.g.
 
 >scontrol show node c651 </br>
 
@@ -133,6 +141,16 @@ Output:
       CapWatts=n/a
       CurrentWatts=0 AveWatts=0 
       ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+
+### Job
+
+> scontrol show job job_number
+
+e.g.
+
+> scontrol show job 34718261
+
+
 ## Module availables
 
 In order to see the different modules available, use the following commands.
