@@ -227,3 +227,21 @@ is equivalent to:
 In order to know the loaded module, run:
 
 > module list
+
+## Usage of nodes in partition
+
+> sinfo -p parition_name -O nodehost,cpusload,freemem
+
+e.g.
+
+> sinfo -p omicsbio -O nodehost,cpusload,freemem
+
+Output:
+
+      HOSTNAMES           CPU_LOAD            FREE_MEM
+      c651                0.03                374721
+      c658                0.01                57372
+      c661                0.98                64843
+      c657                0.01                185748
+      c659                0.01                186231
+      c660                0.02                182630
