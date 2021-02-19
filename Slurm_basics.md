@@ -211,3 +211,18 @@ Output:
       c657                0.01                185748
       c659                0.01                186231
       c660                0.02                182630
+
+> sinfo -p omicsbio  -O nodehost,cpusstate,freemem,allocmem,memory
+
+
+Output:
+
+
+      HOSTNAMES           CPUS(A/I/O/T)       FREE_MEM            ALLOCMEM            MEMORY
+      c651                40/4/0/44           240393              244736              385300
+      c659                21/19/0/40          126713              92160               191694
+      c660                21/19/0/40          1747                112640              191694
+      c657                40/0/0/40           162392              71680               191694
+      c658                40/0/0/40           162502              71680               191694
+      c661                0/40/0/40           188454              0                   191694
+
