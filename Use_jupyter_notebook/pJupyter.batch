@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Change according to your partition
 #SBATCH --partition=omicsbio
 #SBATCH --ntasks=1
 #SBATCH --output=jupyter_notebook_%J.log
@@ -9,7 +9,7 @@
 #SBATCH --job-name=jupyter-notebook
 #SBATCH --mail-user=user@ou.edu
 #SBATCH --mail-type=ALL
-#SBATCH --chdir=/work/omicsbio/paulcalle/
+#SBATCH --chdir=/work/omicsbio/user007/
 
 #################################################
 

@@ -1,9 +1,7 @@
 # Slurm basics
 
-## Work folder PANlab in schooner 
-> cd /work/omicsbio/
-
 ## Information of partition
+For my lab, we have the partition name: omicsbio. Change according to your partition.
 > sinfo -p omicsbio
 
 Output: 
@@ -13,22 +11,13 @@ Output:
       omicsbio     up   infinite      4   idle c[651,657,659-660]
 -p: partition
 
-if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
-
-## Table of nodes in schooner:
-
-|Node| # Processors| # Sockets | Memory |
-|---|---|---|---|
-|**c651**| **44** | 2 | **400GB**|  
-|c657| 40 | 2 | 200GB|
-|c658| 40 | 2 | 200GB|
-|c659| 40 | 2 | 200GB|
-|c660| 40 | 2 | 200GB|
-|c661| 40 | 2 | 200GB|
+Note: if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
 
 ## Jobs in partition
-
+To see jobs running in a specific partition:
 > squeue -p omicsbio
+
+-p: partition <br>
 
 Output:
 
@@ -37,12 +26,10 @@ Output:
       28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
       27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
--p: partition <br>
-
+To see jobs running for a specific user:
+-u: user <br>
 
 > squeue -u adbadre
-
--u: user
 
 Output:
 
@@ -50,7 +37,7 @@ Output:
       28000091   omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
       27996452   omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
-If -p nor u is specified, it shows all jobs in all partitions
+Note: If -p nor u is specified, it shows all jobs in all partitions
 
 ## Cancel jobs
 
@@ -60,9 +47,7 @@ e.g. <br>
 > scancel 28204348
 
 
-## Get Information
-
-# Used space quota
+## Used space quota
 
 In order to see the space used in your home directory, use:
 
@@ -72,7 +57,8 @@ Ouput:
 
       You're using 8.50 GB of 21.47 GB allowed space.
 
-### Partition
+## Partition properties
+If you can to look at your partition's properties, you can use the following command.
 
 >  scontrol show partition partition_name
 
@@ -94,33 +80,13 @@ Output:
       JobDefaults=(null)
       DefMemPerNode=UNLIMITED MaxMemPerNode=385300
 
-### Node
+## Node properties
+If you can to look at a specific node's properties, you can use the following command.
 
 >scontrol show node node_name </br>
 
 e.g.
 
->scontrol show node c651 </br>
-
-Output:
-
-      NodeName=c651 Arch=x86_64 CoresPerSocket=22
-      CPUAlloc=1 CPUTot=44 CPULoad=1.02
-      AvailableFeatures=(null)
-      ActiveFeatures=(null)
-      Gres=(null)
-      NodeAddr=c651 NodeHostName=c651 Version=20.02.1
-      OS=Linux 3.10.0-693.11.6.el7.x86_64 #1 SMP Thu Jan 4 01:06:37 UTC 2018
-      RealMemory=385300 AllocMem=61440 FreeMem=358601 Sockets=2 Boards=1
-      State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=10 Owner=N/A MCS_label=N/A
-      Partitions=omicsbio
-      BootTime=2020-02-07T10:53:29 SlurmdStartTime=2020-05-05T16:49:01
-      CfgTRES=cpu=44,mem=385300M,billing=44
-      AllocTRES=cpu=1,mem=60G
-      CapWatts=n/a
-      CurrentWatts=0 AveWatts=0
-      ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
- 
 > scontrol show node c657 </br>
 
 Output:
@@ -142,8 +108,8 @@ Output:
       CurrentWatts=0 AveWatts=0 
       ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
 
-### Job
-
+## Job properties
+If you can to look at a specific job's properties, you can use the following command.
 > scontrol show job job_number
 
 e.g.
@@ -151,11 +117,11 @@ e.g.
 > scontrol show job 34718261
 
 
-## Module availables
+## Modules available
 
 In order to see the different modules available, use the following commands.
 
-This [link](http://www.ou.edu/oscer/resources/hpc_software) contains a non-updated list.
+There is a list at [this link](http://www.ou.edu/oscer/resources/hpc_software); however, it is non-updated.
 
 > module avail
 
@@ -224,7 +190,7 @@ is equivalent to:
 
 ## List of modules
 
-In order to know the loaded module, run:
+In order to know the loaded modules, run:
 
 > module list
 
