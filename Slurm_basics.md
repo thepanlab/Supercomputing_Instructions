@@ -4,12 +4,14 @@
 For my lab, we have the partition name: omicsbio. Change according to your partition.
 > sinfo -p omicsbio
 
+-p: partition
+
 Output: 
 
       PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST  
       omicsbio     up   infinite      2    mix c[658,661] 
       omicsbio     up   infinite      4   idle c[651,657,659-660]
--p: partition
+
 
 Note: if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
 
