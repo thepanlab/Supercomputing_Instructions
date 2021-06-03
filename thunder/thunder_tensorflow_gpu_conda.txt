@@ -2,6 +2,10 @@ ssh thunder, GPU, tensorflow, jupyter
 
 Conda cheat sheet: https://kapeli.com/cheat_sheets/Conda.docset/Contents/Resources/Documents/index
 
+You should be logged in to OU's VPN to connect to thunder.
+Use the following link for info about setting up VPN. 
+https://www.ou.edu/marcomm/cms/get-started/vpn
+
 Steps:
 (1) Install Anaconda
 (2) Create and activate a new conda env with tensorflow-gpu
@@ -13,7 +17,7 @@ Steps:
 > cd ~
 > wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
 
-# Run the bash file after installing anaconda. 
+# Run the bashrc file after installing anaconda. 
 > . ~/.bashrc
 
 # After executing the .bashrc file, the (base) environment will become active.
