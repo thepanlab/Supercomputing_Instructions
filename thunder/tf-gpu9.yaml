@@ -1,0 +1,26 @@
+name: tf-gpu9
+
+channels:
+  - pytorch
+  - conda-forge
+  - nvidia
+  - defaults
+
+dependencies:
+  - cudatoolkit=11.1.74
+  - cudnn
+  - nccl
+  - pip
+  - pandas
+  - matplotlib
+  - python>=3.8.5
+  - scikit-learn
+  - pip:
+     - networkx
+     - tqdm
+     - matplotlib
+     - pydot
+     - graphviz
+     - tensorflow
+     - tensorflow-gpu
+     - nibabel
