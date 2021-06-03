@@ -1,0 +1,53 @@
+# ssh thunder, GPU, tensorflow, jupyter
+
+Conda cheat sheet: https://kapeli.com/cheat_sheets/Conda.docset/Contents/Resources/Documents/index
+
+You should be logged in to OU's VPN to connect to thunder.
+Use the following link for info about setting up VPN. 
+https://www.ou.edu/marcomm/cms/get-started/vpn
+
+## Steps:
+(1) Install Anaconda
+(2) Create and activate a new conda env with tensorflow-gpu
+(3) Install jupyter lab and other packages
+(4) Run jupyter lab
+
+### (1) Retrieve and install Anaconda from home directory.
+> cd ~ <br />
+> wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+
+### (2) Run the bashrc file after installing anaconda. 
+> . ~/.bashrc
+
+### After executing the .bashrc file, the (base) environment will become active.
+### Deactivate the (base) environment before creating new environment. 
+> conda deactivate
+
+### (2) Upload the .yaml file to thunder (remember the file location for next command).
+
+### Create new conda environment using .yaml file.
+> conda env create -f ~/conda-yaml/tf-gpu9.yaml
+
+### Activate the new environment.
+> conda activate tf-gpu9
+
+### Confirm GPU access in conda environment with tensorflow.
+> python -c 'import tensorflow as tf ; tf.config.list_physical_devices()'
+
+ *** all steps below should have environment activated ***
+
+### (3) Install jupyter lab in the environment.
+> conda install jupyterlab
+
+### (4) Launch jupyter lab.
+> jupyter lab
+
+### Create ssh-tunnel from local command line.
+### Or upload and run script jupy.sh.
+> ssh -N -f -L 8888:localhost:8888 jreynolds@thunder.cs.nor.ou.edu
+-- enter password
+
+### Copy and paste the link given from the output of launching jupyter lab from thunder.
+> http://localhost:8888/lab?token=381df2b315147a55967b758163031eb59e06103929ae704d
+
+# Unleash the thunder.
