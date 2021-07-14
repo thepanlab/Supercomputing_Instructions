@@ -28,8 +28,9 @@ if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
 
 ## Jobs in partition
 
-> squeue -p omicsbio
+> squeue -p omicsbio <br>
 
+-p: partition <br>
 Output:
 
          JOBID PARTITION     NAME     USER ST        TIME  NODES NODELIST(REASON) 
@@ -37,7 +38,7 @@ Output:
       28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
       27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
--p: partition <br>
+
 
 
 > squeue -u adbadre
@@ -59,10 +60,9 @@ If -p nor u is specified, it shows all jobs in all partitions
 e.g. <br>
 > scancel 28204348
 
+# Get Information
 
-## Get Information
-
-# Used space quota
+## Used space quota
 
 In order to see the space used in your home directory, use:
 
@@ -72,7 +72,7 @@ Ouput:
 
       You're using 8.50 GB of 21.47 GB allowed space.
 
-### Partition
+## Partition
 
 >  scontrol show partition partition_name
 
