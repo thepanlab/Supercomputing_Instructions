@@ -13,8 +13,10 @@ https://www.ou.edu/marcomm/cms/get-started/vpn
 (4) Run jupyter lab
 
 ### (1) Retrieve and install Anaconda from home directory.
+
 > cd ~ <br />
-> wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+> wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh <br />
+> bash Anaconda3-2021.05-Linux-x86_64.sh
 
 ### (2) Run the bashrc file after installing anaconda. 
 > . ~/.bashrc
