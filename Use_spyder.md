@@ -1,8 +1,7 @@
 # How to use Spyder
 
 ## Schooner
-
-### modules load
+Load the following modules and install spyder
 
 > module load Python/3.6.4-foss-2017b <br/>
 > module load X11/20180131-foss-2017b <br/>
@@ -15,7 +14,7 @@
 
 * In your web browser, log into https://ondemand.oscer.ou.edu with your OSCER account
 * Under Interactive Apps, select Spyder3
-* From the partition drop-down, choose omicsbio
+* From the partition drop-down, choose your partition
 * Enter the number of hours and cores
 * Click the launch button.
 * Once the session is ready, click the "Launch noVNC in New Tab" button

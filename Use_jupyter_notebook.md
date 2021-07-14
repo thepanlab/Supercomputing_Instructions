@@ -16,7 +16,7 @@ The memory size you want to use:
 
 > #SBATCH --mem=10G
 
-*(Optional)* The nodes you would like to use
+The node you would like to use
 
 > #SBATCH --nodelist=c660
 
@@ -26,7 +26,7 @@ Time to run:
 
 Working directory
 
-> #SBATCH --chdir=/work/omicsbio/paulcalle/
+> #SBATCH --chdir=/work/omicsbio/user007/
 
 The port use for the connection:
 
@@ -41,6 +41,8 @@ module load TensorFlow/1.8.0-foss-2018a-Python-3.6.4
 
 ## Setup tunnel(Windows)
 
+In order to connect the jupyter notebook to your local machine, it is neccesary to create a tunnel
+
 In Putty:
 
 It would be necessary to configurate a tunnel. Go to *Connection/SSH/Tunnels*. If you didn't specify a node, you could use the command `squeue` or see the output file (`jupyter_notebook_number.log`). For instance, with node 660 and port 8893, fill the options in this way, then press **Add**.
@@ -49,7 +51,7 @@ It would be necessary to configurate a tunnel. Go to *Connection/SSH/Tunnels*. I
 
 ## Open jupyter notebook
 
-After you run
+After you submit your job
 
 > sbatch pJupyter.batch
 
