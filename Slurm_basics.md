@@ -16,18 +16,11 @@ Output:
 Note: if -p is not specified (i.e. _sinfo_), all partitions nodes are shown
 
 ## Jobs in partition
-<<<<<<< HEAD
-
-> squeue -p omicsbio <br>
-
--p: partition <br>
-=======
 To see jobs running in a specific partition:
 > squeue -p omicsbio
 
 -p: partition <br>
 
->>>>>>> 4aed88f429a133591408cc22b96e0f46ce299854
 Output:
 
          JOBID PARTITION     NAME     USER ST        TIME  NODES NODELIST(REASON) 
@@ -35,13 +28,8 @@ Output:
       28000091  omicsbio jupyter-  adbadre  R 10-00:09:16      1 c660
       27996452  omicsbio jupyter-  adbadre  R 10-04:47:54      1 c659
 
-<<<<<<< HEAD
-
-
-=======
 To see jobs running for a specific user:
 -u: user <br>
->>>>>>> 4aed88f429a133591408cc22b96e0f46ce299854
 
 > squeue -u adbadre
 
@@ -72,12 +60,8 @@ Ouput:
 
       You're using 8.50 GB of 21.47 GB allowed space.
 
-<<<<<<< HEAD
-## Partition
-=======
 ## Partition properties
 If you can to look at your partition's properties, you can use the following command.
->>>>>>> 4aed88f429a133591408cc22b96e0f46ce299854
 
 >  scontrol show partition partition_name
 
