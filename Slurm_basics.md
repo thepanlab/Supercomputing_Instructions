@@ -48,6 +48,35 @@ Note: If -p nor u is specified, it shows all jobs in all partitions
 e.g. <br>
 > scancel 28204348
 
+
+# Batch commands
+Include these batch instructions when submitting your job.
+
+### Requesting a specific node
+If you find node c657 is not used, and then you want to submit jobs specificly to this node. You can add the setting to the batch scripts :
+
+> #SBATCH --nodelist=c657
+
+### Excluding Specific Nodes
+If you find node c651 or other nodes like c657 are running plenty of jobs, but it still has resources to share for running other jobs. You want your jobs avoid using these nodes. Actually our pending jobs are prior to be assigned to node c651, if it is available. You can exclude these nodes when submitting jobs:
+
+> #SBATCH --exclude=c651,c657
+
+### Check the memory and CPUs used in a specific node
+Login to this node and use `top` command
+
+> ssh c651  # this is login command <br>
+> top
+
+Use `q` to quit from top 
+> $  exit   # logout from this node
+
+### Exclusive access to computing nodes
+
+If you do not want your jobs share a node with other running jobs:
+
+> #SBATCH --exclusive
+
 # Get Information
 
 ## Used space quota
@@ -59,6 +88,16 @@ In order to see the space used in your home directory, use:
 Ouput:
 
       You're using 8.50 GB of 21.47 GB allowed space.
+
+
+## Special partition
+To check the space in our special space
+
+> df –h /work/omicsbio 
+
+      Filesystem                                              Size  Used Avail Use% Mounted on
+      scratch1.oscer.ou.edu:/export/zscratch1/.work/omicsbio  1.0T  993G   32G  97% /work/omicsbio
+
 
 ## Partition properties
 If you can to look at your partition's properties, you can use the following command.
