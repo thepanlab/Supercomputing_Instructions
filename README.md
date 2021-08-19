@@ -16,5 +16,7 @@ This repository contains useful information for users with private nodes in scho
 
     * The `Use_jupyter_notebook` directory contains a batch file and an image.
 
+* `thunder`: It contains useful information for the GPU cluster. The GPU was adquired from Lambda Labs.
+
 **Linux resources**:
 Linux system is broadly used in supercomputers, therefore you would benefit from learning how to use Unix Shell. The following tutorial [The Unix Shell](http://swcarpentry.github.io/shell-novice/) covers it. If you want a more extensive resource, you can get the book [The Linux Command Line](https://nostarch.com/tlcl2).
