@@ -1,0 +1,44 @@
+Setting up Anaconda environment on Thunder for NLP
+09/15/2021 
+
+(base) jreynolds@thunder:~/conda-yaml$ cat nlp.yaml 
+name: nlp
+
+channels:
+  - pytorch
+  - conda-forge
+  - nvidia
+  - defaults
+
+dependencies:
+  - cudatoolkit=11.1.74
+  - cudnn
+  - nccl
+  - pip
+  - pandas
+  - matplotlib
+  - python>=3.8.5
+  - scikit-learn
+  - pip:
+     - networkx
+     - tqdm
+     - matplotlib
+     - pydot
+     - graphviz
+     - tensorflow
+     - tensorflow-gpu
+     - nibabel
+
+(base) jreynolds@thunder:~$ conda env create -f ~/conda-yaml/nlp.yaml
+
+(base) jreynolds@thunder:~$ conda activate nlp
+
+(nlp) jreynolds@thunder:~$ conda install -c conda-forge spacy
+
+(nlp) jreynolds@thunder:~/projects/GraphDialog$ conda install -c conda-forge spacy-model-en_core_web_sm
+
+(nlp) jreynolds@thunder:~$ conda install -c anaconda nltk
+
+(nlp) jreynolds@thunder:~/projects/GraphDialog$ pip install torchvision 
+
+(nlp) jreynolds@thunder:~/projects/GraphDialog$ python myTrain.py -maxdeps=5 -revgraph=0 -lr=0.001 -hdd=128 -dr=0.2 -bsz=32 -l=1 -ds=kvr
