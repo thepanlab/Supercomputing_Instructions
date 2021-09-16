@@ -9,7 +9,7 @@ e.g. <br>
 
 From [link.]([Link](https://stackoverflow.com/questions/40069883/how-to-set-specific-gpu-in-tensorflow))
 
-# See information GPU cards
+# See information about GPU cards
 > nvidia-smi <br>
 > watch -n 1 nvidia-smi
 
