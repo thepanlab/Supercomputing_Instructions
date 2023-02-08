@@ -41,3 +41,8 @@ In order to specify the shell bash:
 ```
 sudo usermod --shell /bin/bash username
 ```
+
+TLDR
+```
+sudo useradd -m -s /bin/bash username
+```
