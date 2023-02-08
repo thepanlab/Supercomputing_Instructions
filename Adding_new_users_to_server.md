@@ -45,4 +45,5 @@ sudo usermod --shell /bin/bash username
 TLDR
 ```
 sudo useradd -m -s /bin/bash username
+sudo passwd -e username
 ```
