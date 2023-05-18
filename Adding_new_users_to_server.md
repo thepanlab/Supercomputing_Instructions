@@ -47,3 +47,12 @@ TLDR
 sudo useradd -m -s /bin/bash username
 sudo passwd -e username
 ```
+
+# Create folder in additional disk spaces
+
+In additional disk space:
+```
+sudo mkdir username
+sudo chown -R username username
+sudo chgrp -R username username
+```
