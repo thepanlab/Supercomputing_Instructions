@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/37987839/how-can-i-run-tensorboard-on-a-remo
 
 - Create a file writer that saves loss and accuracy in a directory named `logs` during training, such as:
 
-```
+```python
 import tensorflow as tf
 
 ...
@@ -17,7 +17,7 @@ import tensorflow as tf
 train_log_dir = os.path.join('logs', '{}_{}_{}_train'.format(now, dataset_str, tag))
 train_summary_writer = tf.summary.create_file_writer(train_log_dir)
 
-... training ...
+# ... training ...
 
 with train_summary_writer.as_default():
     tf.summary.scalar('loss', tf.reduce_mean(train_loss), step=epoch)
