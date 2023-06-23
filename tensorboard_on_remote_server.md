@@ -27,7 +27,24 @@ with val_summary_writer.as_default():
     tf.summary.scalar('val_loss', tf.reduce_mean(val_loss), step=epoch)
     tf.summary.scalar('val_acc', tf.reduce_mean(val_acc), step=epoch)
 ```
-    
+
+If using Keras. [Source](https://www.tensorflow.org/tensorboard/get_started#using_tensorboard_with_keras_modelfit):
+```python
+model = create_model()
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
+model.fit(x=x_train, 
+          y=y_train, 
+          epochs=5, 
+          validation_data=(x_test, y_test), 
+          callbacks=[tensorboard_callback])
+```
+
 - From the terminal on local machine:
 
     `ssh -L 16006:127.0.0.1:8895 jreynolds@laker.cs.nor.ou.edu`
