@@ -1,6 +1,29 @@
 # Use of storage spaces
 
-##  Data archival on the tape in Petastore
+## Ourdisk
+> /ourdisk/hpc/nullspace/
+
+## OURrstore
+> /archive/ourrstore/omicsbio
+
+Useful commands to see if it has passed to tape or not 
+```batch
+du -hs --apparent-size /archive/ourrstore/omicsbio
+du -hs /archive/ourrstore/omicsbio
+```
+
+## Shared storage at `/work/omicsbio`
+
+We have 1T space in `/work/omisbio`, which is shared by all the members in our lab. To check the space information, use the command:
+> df –h /work/omicsbio 
+
+You can use this command to check space size of `/lwork` and `/lscratch` as well.
+## Petastore
+It is read-only currently. If you want to access, use dtn1. 
+
+> /gpfs1/filesets/tape_2copies/LTO6/omicsbio
+
+##  Data archival on the tape in Petastore (legacy)
 
 If your lab has purchased space on PetaStore. This is good for long-term storage of your data. If you have some data in large size and will not use them in the future for a few months, it’s a good choice to store your data here. For PanLab, our tape directory is `/archive/omicsbio/tape_2copies`. You can create your own directory here to store your own data.  
 Use this interface for interactive Unix shell access to the PetaStore, and for archiving/retrieving files between the PetaStore and OSCER's cluster supercomputer filesystems (for example, /scratch and /home). More info available at [this link](https://www.ou.edu/oscer/resources/petastore). For PetaStore Access on Schooner [this link](PetaStore Access on Schooner)
@@ -71,9 +94,3 @@ cat $LSCRATCH/input.txt  >test_scratch_output.txt
  # the output file named test_scratch_output.txt will exist in directory /work/omicsbio/lizhang12
 ```
 
-## Shared storage at `/work/omicsbio`
-
-We have 1T space in `/work/omisbio`, which is shared by all the members in our lab. To check the space information, use the command:
-> df –h /work/omicsbio 
-
-You can use this command to check space size of `/lwork` and `/lscratch` as well.
