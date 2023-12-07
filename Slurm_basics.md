@@ -254,17 +254,23 @@ Output:
       c659                0.01                186231
       c660                0.02                182630
 
-> sinfo -p omicsbio  -O nodehost,cpusstate,freemem,allocmem,memory
+> sinfo -p disc  -O nodehost,cpusstate,freemem,allocmem,memory,Gres,GresUsed
 
 
 Output:
 
+      HOSTNAMES           CPUS(A/I/O/T)       FREE_MEM            ALLOCMEM            MEMORY              GRES                GRES_USED
+      c849                64/64/0/128         412706              11000               515133              gpu:H100:2          gpu:H100:2(IDX:0-1)
+      c850                64/64/0/128         408037              11000               515133              gpu:H100:2          gpu:H100:2(IDX:0-1)
+      c851                64/64/0/128         350724              11000               515133              gpu:H100:2          gpu:H100:2(IDX:0-1)
+      c852                64/64/0/128         368991              11000               515133              gpu:H100:2          gpu:H100:2(IDX:0-1)
+      c862                64/64/0/128         384052              11000               515133              gpu:A100:2          gpu:A100:2(IDX:0-1)
+      c863                64/64/0/128         365054              11000               515133              gpu:A100:2          gpu:A100:2(IDX:0-1)
+      c864                64/64/0/128         355275              11000               515133              gpu:A100:2          gpu:A100:2(IDX:0-1)
+      c865                64/64/0/128         359428              11000               515133              gpu:A100:2          gpu:A100:2(IDX:0-1)
+      c866                16/112/0/128        303203              250000              515133              gpu:A100:2          gpu:A100:2(IDX:0-1)
+      c856                128/0/0/128         898927              22000               1031541             gpu:A100:4          gpu:A100:4(IDX:0-3)
+      c915                0/128/0/128         2046847             0                   2063324             (null)              gpu:0
+      c916                0/128/0/128         2047942             0                   2063324             (null)              gpu:0
 
-      HOSTNAMES           CPUS(A/I/O/T)       FREE_MEM            ALLOCMEM            MEMORY
-      c651                40/4/0/44           240393              244736              385300
-      c659                21/19/0/40          126713              92160               191694
-      c660                21/19/0/40          1747                112640              191694
-      c657                40/0/0/40           162392              71680               191694
-      c658                40/0/0/40           162502              71680               191694
-      c661                0/40/0/40           188454              0                   191694
 
