@@ -1,7 +1,7 @@
 # Tensorflow GPU environment setup
 
 ## Description
-The following steps and setup should work for blazer, thunder and laker, please note that the specific version of tensorflow is for the medical imaging pipeline, so if not using the pipeline, any version will be fine. Also, try not to install the tensorflow ranking package after everything is built, it may lead to the failure of your working environment.
+The following steps and setup should work for blazer, thunder and laker, please note that the specific version of tensorflow is for the medical imaging pipeline (currently 2.6.2 and 2.15 works), so if not using the pipeline, any version will be fine. Also, try not to install the tensorflow ranking package after everything is built, it may lead to the failure of your working environment.
 
 
 ### Install the miniconda or anaconda
